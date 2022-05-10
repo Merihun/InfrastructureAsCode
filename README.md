@@ -84,3 +84,14 @@ Alternate method - Shell Script: You can write a shell script (.sh) file as:
 ```
 aws cloudformation create-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --region=us-west-2
 ```
+where $1, $2, and $3 can be replaced with the actual values passed as command-line arguments. Note the --parameters and --capabilities options that we will learn in the upcoming lesson.
+
+
+Alternate method - Batch Script You can also try a batch script (.bat) with a similar syntax, except that the actual values can be written as %1 instead as$1.
+
+# Update stack
+You may also want to use update-stack when you want to update an existing stack instead of destroying your stack and creating a new one. The syntax is similar to before:
+```
+aws cloudformation update-stack  --stack-name myFirstTest --region us-east-1 --template-body file://testcfn.yml
+```
+The command above will update the existing stack based on the YAML script you've written.
