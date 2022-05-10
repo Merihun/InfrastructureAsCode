@@ -59,3 +59,19 @@ VPC is the smallest unit of resource.
 Declarative languages: These languages specify what you want, without requiring you to specify how to get it. An example of a popular declarative language is SQL.
 Imperative languages: These languages use statements to change the state of the program. 
 Imperative programming focuses on describing how a program operates step by step, rather than on high-level descriptions of its expected results.Procedural programming is a type of imperative programming in which the program is built from one or more procedures (also termed subroutines or functions). Structured programming and modular programming in general have been promoted as techniques to improve the maintainability and overall quality of imperative programs. The concepts behind object-oriented programming attempt to extend this approach.
+
+# Create stack
+Create the template file: Use the following code for your first test file: testcfn.yml (or choose any other name). Be careful about the indentation while you paste/write the same code in your editor.
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Carlos Rivas / Udacity - This template deploys a VPC
+Resources:
+UdacityVPC:
+  Type: 'AWS::EC2::VPC'
+  Properties:
+    CidrBlock: 10.0.0.0/16
+    EnableDnsHostnames: 'true'
+    Tags:
+    - Key: name
+      Value: myfirsttestvpc
+```
