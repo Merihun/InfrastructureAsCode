@@ -75,3 +75,12 @@ UdacityVPC:
     - Key: name
       Value: myfirsttestvpc
 ```
+Run the aws command : Run the following command in the terminal, from the same directory where you've placed your testcfn.yml file. We are assuming that your stack name is myFirstTest (or choose any other name).
+
+``` 
+aws cloudformation create-stack  --stack-name myFirstTest --region us-east-1 --template-body file://testcfn.yml
+```
+Alternate method - Shell Script: You can write a shell script (.sh) file as:
+```
+aws cloudformation create-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --region=us-west-2
+```
