@@ -95,3 +95,18 @@ You may also want to use update-stack when you want to update an existing stack 
 aws cloudformation update-stack  --stack-name myFirstTest --region us-east-1 --template-body file://testcfn.yml
 ```
 The command above will update the existing stack based on the YAML script you've written.
+
+# Describe stack
+Once a stack is created successfully, you can verify by either going to the web console or running the following command, which will display all the details the stack.
+```
+aws cloudformation describe-stacks --stack-name myFirstTest
+```
+# To delete a stack
+
+The following delete-stack example deletes the specified stack.
+```
+aws cloudformation delete-stack \
+    --stack-name my-stack
+```
+This command produces no output.
+You can describe the details of multiple stacks in one command. If no stack name is specified, then it will return the description for all the stacks created in your account.
