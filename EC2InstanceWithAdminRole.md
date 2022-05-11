@@ -38,3 +38,10 @@ aws s3 ls
 # List the IAM users in your account
 aws iam list-users
 The output of aws iam list-users command will display the details of the recently created user:
+
+
+# Additional Access Keys
+Note that each user can have up to 2 access keys at the same time.
+
+# Why Making Keys Inactive is a Better Choice
+You may make your access key temporarily inactive rather than destroying it and creating a new one. This may be helpful if you want to stop an automated process that uses that key (for example, a CI/CD process).
