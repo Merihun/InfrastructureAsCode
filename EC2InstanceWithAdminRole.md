@@ -18,11 +18,13 @@ Assuming you have already installed the AWS CLI tool and copied the access key f
 
 Verify, if you already have a CLI v1 installed. If yes, prefer to uninstall CLI v1 and have CLI v2 installed, which is the latest one. You can verify the version using:
 ```
-aws --version ```
+aws --version 
+```
 To set up your AWS CLI, type either of the following commands in the terminal:
 ```
 aws configure
-aws configure --profile default```
+aws configure --profile default
+```
 
 Upon prompt:
 Paste the copied access key (access key id and secret access key).
