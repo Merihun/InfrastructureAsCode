@@ -113,13 +113,13 @@ You have been tasked with creating the required Infrastructure-as-code scripts f
 
 # ToDo
 Write a CloudFormation script that:
-<li>
-Creates a VPC
-It will accept the IP Range -also known as CIDR block- from an input parameter
-Creates and attaches an Internet Gateway to the VPC
-Creates Two Subnets within the VPC with Name Tags to call them “Public” and “Private”
-These will also need input parameters for their ranges, just like the VPC.
-The Subnet called “Public” needs to have a NAT Gateway deployed in it
+<li><br>
+Creates a VPC<li><br>
+It will accept the IP Range -also known as CIDR block- from an input parameter<li><br>
+Creates and attaches an Internet Gateway to the VPC<li><br>
+Creates Two Subnets within the VPC with Name Tags to call them “Public” and “Private”<li><br>
+These will also need input parameters for their ranges, just like the VPC.<li><br>
+The Subnet called “Public” needs to have a NAT Gateway deployed in it<li><br>
 This will require you to allocate an Elastic IP that you can then use to assign it to the NAT Gateway.
 The Public Subnet needs to have the MapPublicIpOnLaunch property set to true. Use this reference for help.
 The Private Subnet needs to have the MapPublicIpOnLaunch property set to false.
