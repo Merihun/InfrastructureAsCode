@@ -129,6 +129,6 @@ You will need 2 Routing Tables, one named Public and the other one Private<br><l
 Assign the Public and Private Subnets to their corresponding Routing table<br><li>
 Create a Route in the Public Route Table to send default traffic ( 0.0.0.0/0 ) to the Internet Gateway you created<br><li>
 Create a Route in the Private Route Table to send default traffic ( 0.0.0.0/0 ) to the NAT Gateway<br><li>
-Finally, once you execute this CloudFormation script, you should be able to delete it and create it again, over and over in a predictable and repeatable manner, this is the true verification of working Infrastructure-as-Code
+Finally, once you execute this CloudFormation script, you should be able to delete it and create it again, over and over in a predictable and repeatable manner, this is the true verification of working Infrastructure-as-Code<br>
 # Helpful hints:
 The numbers in the diagram below show the recommended sequence for resource creation. This is not required by CloudFormation but it helps to keep you on track and allows you to stop and verify as you go.
