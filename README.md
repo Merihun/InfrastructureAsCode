@@ -139,3 +139,29 @@ InternetGatewayId: String
 VpcId: String
 VpnGatewayId: String
 ```
+Note that you must specify either InternetGatewayId or VpnGatewayId, but not both.
+
+Example: See the VPCGatewayAttachment from the video above, referencing both the VPC and the InternetGateway defined above using a !Ref intrinsic function:
+```
+Resources:
+  VPC: 
+      Type: AWS::EC2::VPC
+      Properties:
+          CidrBlock: !Ref VpcCIDR
+          EnableDnsHostnames: true
+          Tags: 
+              - Key: Name 
+                Value: !Ref EnvironmentName            
+  InternetGateway:
+      Type: AWS::EC2::InternetGateway
+      Properties:
+          Tags:
+              - Key: Name
+                Value: !Ref EnvironmentName
+
+  InternetGatewayAttachment:
+      Type: AWS::EC2::VPCGatewayAttachment
+      Properties:
+          InternetGatewayId: !Ref InternetGateway
+          VpcId: !Ref VPC
+```
