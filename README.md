@@ -180,3 +180,5 @@ PublicSubnets:
         Export:
           Name: !Sub ${EnvironmentName}-PUB-NETS
 ```
+# Other materials
+git clone https://github.com/t04glovern/aws-pptp-cloudformation.git
