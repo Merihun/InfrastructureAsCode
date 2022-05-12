@@ -104,3 +104,10 @@ Resources:
   }
 ]
 ```
+
+# Challenge 2
+
+# Project Overview
+You have been tasked with creating the required Infrastructure-as-code scripts for a new cloud environment in AWS. The Lead Solutions Architect for the project sends you the following diagram.
+<img width="1122" alt="image" src="https://user-images.githubusercontent.com/26862785/168165394-7c0b4f62-3a9a-4255-aff9-39b7f4848e10.png">
+
