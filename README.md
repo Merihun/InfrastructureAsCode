@@ -165,3 +165,18 @@ Resources:
           InternetGatewayId: !Ref InternetGateway
           VpcId: !Ref VPC
 ```
+# Join Function
+You can use the join function to combine a group of values. The syntax requires you provide a delimiter and a list of values you want appended.
+
+Join function syntax:
+```
+Fn::Join: [ delimiter, [ comma-delimited list of values ] ]
+```
+In the following example we are using !Join to combine our subnets before returning their values:
+```
+PublicSubnets:
+        Description: A list of the public subnets
+        Value: !Join [ ",", [ !Ref PublicSubnet1, !Ref PublicSubnet2 ]]
+        Export:
+          Name: !Sub ${EnvironmentName}-PUB-NETS
+```
