@@ -89,6 +89,17 @@ aws cloudformation create-stack --stack-name $1 --template-body file://$2  --par
 ```
 where $1, $2, and $3 can be replaced with the actual values passed as command-line arguments. Note the --parameters and --capabilities options that we will learn in the upcoming lesson.
 
+# How to execute the Shell scripts?
+You can run either of the shell scripts (create.sh or update.sh) as:
+```
+./<file_name> argument_1 argument_2 argument_3
+```
+For example, you can run the following command:
+```
+./create.sh ourdemoinfra ourinfra.yml ourinfra.json
+
+```
+
 
 Alternate method - Batch Script You can also try a batch script (.bat) with a similar syntax, except that the actual values can be written as %1 instead as$1.
 
