@@ -129,3 +129,13 @@ aws cloudformation delete-stack \
 ```
 This command produces no output.
 You can describe the details of multiple stacks in one command. If no stack name is specified, then it will return the description for all the stacks created in your account.
+
+# Connecting VPC's & Internet Gateways
+Syntax of VPCGatewayAttachment resource: It's important to note when connecting an Internet Gateway to a VPC, we need to define an additional resource called InternetGatewayAttachment. This attachment references both the VPC and the InternetGateway. Here is the syntax for the following connection:
+```
+Type: AWS::EC2::VPCGatewayAttachment
+Properties: 
+InternetGatewayId: String
+VpcId: String
+VpnGatewayId: String
+```
