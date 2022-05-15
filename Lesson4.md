@@ -4,7 +4,8 @@
 These are the EC2 instances in the public subnet with required access to the private subnets' servers. Generally, we would not want our private servers to be discoverable by anyone outside the VPC. However, we want to access those private servers from the Internet. It is made possible by using a Jumpbox (also called as Bastion Host). It is important to note that the security group attached to the private servers must allow the IP address of the public Jumpbox to connect to it.
 
 
-<img width="1056" alt="image" src="https://user-images.githubusercontent.com/26862785/168442112-a037fdf2-2af4-493c-8881-7d516d7c7cb2.png">
+<img width="1050" alt="image" src="https://user-images.githubusercontent.com/26862785/168442284-926a27e6-5717-4dae-bd61-d4b4007eafda.png">
+
 
 # Create a Jumpbox
 Create a new key-pair, jumpbox-key.pem. However, you can use an existing key-pair if available. Remember that key-pairs are specific to an AWS region. Also, the VPC you have to choose while launching the Jumpbox must be the same one in which you have been creating Cloudformation stacks.
@@ -39,3 +40,26 @@ ssh -i "private-server-devops-key.pem" ubuntu@10.0.2.74
 ```
 Recall that the default user name for a Linux system is ec2-user and for an Ubuntu system is ubuntu.
 Lastly, check the status of the running web server in the private instance, as shown in the snapshot below:
+
+<img width="907" alt="image" src="https://user-images.githubusercontent.com/26862785/168443061-e97cb904-e427-4147-ba61-0945b112993f.png">
+
+Checking if the Apache server is running in the Ubuntu machine, using service apache2 status command.
+Similarly, you can SSH login to the second private server from the Jumpbox. You have to replace the private IP address of the second server in the commands above.
+
+
+Summary
+As this lesson comes to an end, now you should be able to...
+
+Specify firewall rules using security groups
+Create autoscaling groups for the elasticity of servers
+Code the launch configuration for the web application
+Add the target groups and listeners
+Update the stack with the load balancer
+Learn to debug the security group
+
+# Research the EC2 Parameter Store
+One way to avoid hard-coding ever-changing values into your server infrastructure is by using parameters. Examples of parameters that frequently change include database connection details, and sensitive data, such as passwords and secret API access keys.
+
+Using the AWS CLI Tool, store and retrieve parameters from the EC2 Parameter Store. Play around with changing the value from the EC2 Console and not just the CLI Tool.
+
+It’s critical that you practice this, as this is not only a best practice but also a common practice.
