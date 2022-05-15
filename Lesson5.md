@@ -53,3 +53,16 @@ Export a few resources, such as private Subnet IDs, from your previous stack. Th
 Fn::ImportValue: <Exported_value>
 ```
 Use parameters from a separate file to make your template script reusable. In your new template file, use the substitution function, !Sub "${parameter} to refer to any parameter variable.
+
+# Solution
+To create a database in CloudFormation, you'll need
+A Subnet group created, a Security Group that will control access in and out of your database.
+A user name and a password that will serve as the master for this db server. These should be the parameters in your script.
+You'll also need subnets, ideally 2.
+
+# Best Practice
+Add DeletionPolicy and set it to Retain at the bottom of your DB Creation script. This way you don't lose your database if you accidentally delete your stack. (Keep this in mind if you indeed intend to delete this DB when done practicing)
+
+
+Best github repo for this complete lessons.
+https://github.com/udacity/nd9991-c2-Infrastructure-as-Code-v1-Exercises_Solution
