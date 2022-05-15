@@ -33,5 +33,16 @@ aws s3 cp AWSWebApp.jpeg s3://merihunbucket
 
 This line above copies a file from your local machine to the S3 bucket.
 
-Versioning
+## Versioning
 You can keep past versions of your S3 bucket, which means that deleted files will still exist in prior versions of your S3 bucket.
+
+# Key Points
+S3 can be used to store your config files, media or log files.
+Your servers don't need credentials to access S3 provided they have a role assigned.
+We recommend you choose RDS as opposed to installing a database in your own servers that you have to manage and back up yourself.
+
+# Exercise 1
+Deploy a MySQL database
+Create a CloudFormation script that deploys a MySQL DB with an associated security group.
+
+<img width="797" alt="image" src="https://user-images.githubusercontent.com/26862785/168476115-39efc49a-2e52-4a69-82ee-88393e930c5e.png">
