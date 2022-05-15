@@ -133,5 +133,6 @@ Finally, once you execute this CloudFormation script, you should be able to dele
 # Helpful hints:
      
 # Helpful hints:
+     
 The numbers in the diagram below show the recommended sequence for resource creation. This is not required by CloudFormation but it helps to keep you on track and allows you to stop and verify as you go.
 <img width="1047" alt="image" src="https://user-images.githubusercontent.com/26862785/168167228-5f27b2e2-96a4-43e6-9db3-4d312932a737.png">
