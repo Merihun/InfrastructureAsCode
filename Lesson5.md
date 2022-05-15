@@ -66,3 +66,7 @@ Add DeletionPolicy and set it to Retain at the bottom of your DB Creation script
 
 Best github repo for this complete lessons.
 https://github.com/udacity/nd9991-c2-Infrastructure-as-Code-v1-Exercises_Solution
+
+Final solution:
+https://github.com/mehmetincefidan/Deploy-a-High-Availability-Web-App-Using-CloudFormation
+
