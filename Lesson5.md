@@ -46,3 +46,10 @@ Deploy a MySQL database
 Create a CloudFormation script that deploys a MySQL DB with an associated security group.
 
 <img width="797" alt="image" src="https://user-images.githubusercontent.com/26862785/168476115-39efc49a-2e52-4a69-82ee-88393e930c5e.png">
+
+## Bonus Steps
+Export a few resources, such as private Subnet IDs, from your previous stack. Then only you can cross-reference the resources from another stack, such as using:
+```
+Fn::ImportValue: <Exported_value>
+```
+Use parameters from a separate file to make your template script reusable. In your new template file, use the substitution function, !Sub "${parameter} to refer to any parameter variable.
